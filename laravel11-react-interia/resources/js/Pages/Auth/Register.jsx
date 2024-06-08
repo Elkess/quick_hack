@@ -31,22 +31,56 @@ export default function Register() {
             <Head title="Register" />
 
             <form onSubmit={submit}>
-                <div>
-                    <InputLabel htmlFor="name" value="Name" />
+            <div className="mt-4">
+
+                    <InputLabel htmlFor="cin" value="Cin" />
 
                     <TextInput
-                        id="name"
-                        name="name"
-                        value={data.name}
+                        id="cin"
+                        type="text"
+                        name="cin"
+                        value={data.cin}
                         className="mt-1 block w-full"
-                        autoComplete="name"
-                        isFocused={true}
-                        onChange={(e) => setData('name', e.target.value)}
+                        autoComplete="username"
+                        onChange={(e) => setData('cin', e.target.value)}
                         required
                     />
 
-                    <InputError message={errors.name} className="mt-2" />
+                    <InputError message={errors.cin} className="mt-2" />
                 </div>
+            <div className="mt-4">
+                    <InputLabel htmlFor="prenom" value="Prenom" />
+
+                    <TextInput
+                        id="prenom"
+                        type="text"
+                        name="prenom"
+                        value={data.prenom}
+                        className="mt-1 block w-full"
+                        autoComplete="username"
+                        onChange={(e) => setData('prenom', e.target.value)}
+                        required
+                    />
+
+                    <InputError message={errors.email} className="mt-2" />
+                </div>
+            <div className="mt-4">
+                    <InputLabel htmlFor="nom" value="Nom" />
+
+                    <TextInput
+                        id="nom"
+                        type="text"
+                        name="nom"
+                        value={data.nom}
+                        className="mt-1 block w-full"
+                        autoComplete="username"
+                        onChange={(e) => setData('nom', e.target.value)}
+                        required
+                    />
+
+                    <InputError message={errors.nom} className="mt-2" />
+                </div>
+
 
                 <div className="mt-4">
                     <InputLabel htmlFor="email" value="Email" />
